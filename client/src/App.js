@@ -13,7 +13,7 @@ function App() {
   const [results, setResults] = useState({});
   const [playlist, setPlaylist] = useState([]);
   const [playlistName, setPlaylistName] = useState('')
-  const [list, setList] = useState([]);
+  // const [list, setList] = useState([]);
   const [playlistList, setPlaylistList] = useState([]);
   const [openSavedPlaylist, setOpenSavedPlaylist] = useState(false)
 
@@ -103,7 +103,6 @@ function App() {
     setPlaylist([])
     setPlaylistName('')
   };
-  console.log(list)
   const viewAllPlaylist = ()=>{
     setOpenSavedPlaylist(true)
   }
