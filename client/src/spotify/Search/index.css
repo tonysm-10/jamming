@@ -12,3 +12,12 @@
     justify-content: center;
     align-items: center;
 }
+.searchbar button{
+    width: 9.8rem;
+    height: 2rem;
+}
+
+.viewBtn{
+    background-color: lightseagreen;
+    color: black;
+}

@@ -88,3 +88,9 @@ img{
     }
   }
 
+  .main-button{
+    /* background: linear-gradient(90deg, rgba(42, 245, 152, 1) 0%, rgba(27, 215, 187, 1) 50%, rgba(15, 190, 216, 1) 100%); */
+    background-color: #7CDD6D;
+    max-width: 14em;
+  }
+

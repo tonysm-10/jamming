@@ -23,8 +23,10 @@ const Results = ({ openPreviewInNewTab, playlist, results, addToPlaylist }) => {
               <p>Artist: {track.artists[0].name}</p>
               <p>Song: {track.name}</p>
             </div>
-            <button className='playbtn' onClick={() => openPreviewInNewTab(track.preview_url)}>Play ▶️</button>
-            <button className={playlist.length > 0 ? 'btn': 'button'} onClick={() => addToPlaylist(track)}>Add to Playlist</button>
+            <div className="flex-column">
+              <button onClick={() => openPreviewInNewTab(track.preview_url)}>Play ▶️</button>
+              <button className={playlist.length > 0 ? 'btn': 'button'} onClick={() => addToPlaylist(track)}>Add to Playlist</button>
+            </div>
           </div>
         </div>
       ))}

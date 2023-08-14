@@ -6,7 +6,7 @@ const Playlist = ({inputHandle, savePlaylist, playlist, deleteFromPlaylist }) =>
       {playlist.length > 0 && (
         <div className='savePlaylist'>
           <input onChange={inputHandle} placeholder='name' />
-          <button onClick={savePlaylist}>Save To Playlist</button>
+          <button className='main-button' onClick={savePlaylist}>Save To Playlist</button>
         </div>
       )}
 

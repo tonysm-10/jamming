@@ -4,12 +4,12 @@ import './index.css';
 const List = ({ openPreviewInNewTab, list, onExit }) => {
   return (
     <div className="playlist-page">
-      <button onClick={onExit}>Exit</button>
-      <h1>Your Playlists</h1>
+      <button className="viewBtn" style={{height: '2rem', width: '4rem', fontSize: '15px'}} onClick={onExit}>Exit</button>
+      <h1>SAVED MUSIC</h1>
       {list.length > 0 ? (
         list.map((playlist, index) => (
           <div className='page' key={index}>
-            <h2>Playlist Name: {playlist.name}</h2>
+            <h2> - {playlist.name}</h2>
             {playlist.tracks.length > 0 ? (
               <div className='all-playlist-container'>
                 {playlist.tracks.map((track, trackIndex) => (

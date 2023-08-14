@@ -46,3 +46,11 @@
     margin-left: 4em;
     gap: 3em;
 }
+
+.flex-column{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 10px;
+    /* align-items: center; */
+}
