@@ -1,0 +1,10 @@
+
+.savePlaylist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    padding: 4em 0;
+    position: relative;
+    left: 30%;
+}
