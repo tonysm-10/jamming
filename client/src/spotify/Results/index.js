@@ -1,11 +1,16 @@
-import React from "react";
-import './index.css';
 
-const Results = ({ openPreviewInNewTab, playlist, results, addToPlaylist }) => {
+import './index.css';
+import Audio from '../Audio.js';
+
+const Results = ({ playlist, results, addToPlaylist }) => {
+
+
+
+
+
   if (!results.tracks || !results.tracks.items || results.tracks.items.length === 0) {
     return null; 
   }
-
 
   return (
     <div className={playlist.length > 0 ? "": 'results'}>
@@ -23,8 +28,10 @@ const Results = ({ openPreviewInNewTab, playlist, results, addToPlaylist }) => {
               <p>Artist: {track.artists[0].name}</p>
               <p>Song: {track.name}</p>
             </div>
+            {track.preview_url && (
+                <Audio track={track.preview_url} />
+              )}
             <div className="flex-column">
-              <button onClick={() => openPreviewInNewTab(track.preview_url)}>Play ▶️</button>
               <button className={playlist.length > 0 ? 'btn': 'button'} onClick={() => addToPlaylist(track)}>Add to Playlist</button>
             </div>
           </div>
@@ -35,4 +42,3 @@ const Results = ({ openPreviewInNewTab, playlist, results, addToPlaylist }) => {
 };
 
 export default Results;
-

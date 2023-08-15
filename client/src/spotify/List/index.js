@@ -17,7 +17,12 @@ const List = ({ openPreviewInNewTab, list, onExit }) => {
                     <img src={track.image} alt="Album Cover" />
                     <p>Artist: {track.artist}</p>
                     <p>Song: {track.song}</p>
-                    <button onClick={() => openPreviewInNewTab(track.preview)}>Play ▶️</button>
+                    {track.preview && (
+                      <audio style={{maxWidth: '14em', marginBottom: '1rem'}} controls controlsList="nodownload">
+                          <source src={track.preview} type="audio/mpeg" />
+                          Your browser does not support the audio element.
+                      </audio>
+                    )}
                   </div>
                 ))}
               </div>

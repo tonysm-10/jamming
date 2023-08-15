@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem 0;
+    margin: 2rem 9rem;
 }
 
 .searchbar{
@@ -12,12 +12,29 @@
     justify-content: center;
     align-items: center;
 }
+
+.searchbar input::placeholder{
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.searchbar input{
+    text-align: center;
+}
 .searchbar button{
     width: 9.8rem;
     height: 2rem;
+    cursor: pointer;
 }
 
 .viewBtn{
     background-color: lightseagreen;
     color: black;
+    cursor: pointer;
+}
+
+.clearBtn{
+    background-color: lightcoral;
+    color: black;
+    cursor: pointer;
 }

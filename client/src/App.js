@@ -17,8 +17,9 @@ function App() {
   const [playlistList, setPlaylistList] = useState([]);
   const [openSavedPlaylist, setOpenSavedPlaylist] = useState(false)
 
+
   const handleChange = ({ target }) => {
-    setSearch(target.value);
+    setSearch(()=> target.value);
   };
 
   const handleSearch = async () => {
@@ -59,7 +60,7 @@ function App() {
       );
 
       const searchData = await searchResponse.json();
-      setResults(searchData);
+      setResults(()=> searchData);
     } catch (error) {
       console.error("Error searching:", error);
     }
@@ -120,7 +121,7 @@ return (
       <div>
         <Search viewAllPlaylist={viewAllPlaylist} results={results} search={search} isLoading={isLoading} handleChange={handleChange} handleSearch={handleSearch} />
         <div className="container">
-          <Results openPreviewInNewTab={openPreviewInNewTab} results={results} addToPlaylist={addToPlaylist} playlist={playlist} />
+          <Results handleSearch={handleSearch} openSavedPlaylist={openSavedPlaylist} openPreviewInNewTab={openPreviewInNewTab} results={results} addToPlaylist={addToPlaylist} playlist={playlist} />
           <Playlist inputHandle={inputHandle} savePlaylist={savePlaylist} playlist={playlist} results={results} deleteFromPlaylist={deleteFromPlaylist} />
         </div>
       </div>
