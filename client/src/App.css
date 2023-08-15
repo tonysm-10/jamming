@@ -91,8 +91,17 @@ img{
     .container{
         display: flex;
         flex-direction: column;
-        margin: 2em 3rem;
+        margin: 2em 5rem;
     }
+    .item{
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+    }
+    img{
+        width: 100%;
+    }
+
     .flex{
         display: flex;
         flex-direction: column;

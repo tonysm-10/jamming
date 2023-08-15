@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
     width: 40%;
     padding: 2.3em 0;
     position: relative;
@@ -12,4 +11,5 @@
 
 .savePlaylist input{
     height: 2rem;
+    max-width: 11rem;
 }
